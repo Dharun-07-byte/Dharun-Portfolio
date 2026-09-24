@@ -26,7 +26,7 @@ export const personalInfo = {
 
 export const statsData = [
   { label: "B.E. ECE CGPA", value: "8.40 / 10", color: "#00f2fe" },
-  { label: "Certifications", value: "8 Verified", color: "#7928ca" },
+  { label: "Certifications", value: "7 Verified", color: "#7928ca" },
   { label: "HSC Score", value: "81%", color: "#00f5a0" },
   { label: "SSLC Score", value: "83%", color: "#ff007f" }
 ];
@@ -271,19 +271,6 @@ export const certificationsData = [
     credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Agentic AI", "Salesforce Ecosystem", "Automation"],
     description: "Specialized training in generative and autonomous AI agents, enterprise workflow automation, and CRM intelligence."
-  },
-  {
-    id: "cert-8",
-    title: "Resume Writing and Job Interviewing",
-    subtitle: "Executive Communication & Interview Acumen",
-    issuer: "HP Foundation",
-    badge: "Professional",
-    category: "Professional",
-    date: "Verified",
-    credentialId: "HP-CAREER-2024",
-    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
-    skills: ["Professional Ethics", "Communication", "Interview Skills"],
-    description: "Professional development credential focusing on career readiness, corporate communications, and interview preparation."
   }
 ];
 

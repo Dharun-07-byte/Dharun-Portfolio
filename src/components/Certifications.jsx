@@ -201,29 +201,54 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
               </div>
             </div>
           </div>
-        ) : null}
-
-        {/* ========================================================
-            GRID OF ALL OTHER CERTIFICATES & CREDENTIALS
+        ) : null}        {/* ========================================================
+            GRID OF ALL ACCREDITED CERTIFICATES & CREDENTIALS
             ======================================================== */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCerts
-            .filter(c => c.id !== 'pega-internship')
-            .map((cert) => (
+          {filteredCerts.map((cert) => {
+            const isPega = cert.id === 'pega-internship';
+            return (
               <div
                 key={cert.id}
-                className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs hover:shadow-md hover:border-blue-300 transition-all duration-200 flex flex-col justify-between group"
+                className={`rounded-2xl p-6 transition-all duration-200 flex flex-col justify-between group ${
+                  isPega
+                    ? 'bg-white border-2 border-[#168FE5] shadow-md hover:shadow-lg ring-2 ring-[#168FE5]/10'
+                    : 'bg-white border border-slate-200 shadow-xs hover:shadow-md hover:border-blue-300'
+                }`}
               >
                 <div>
                   {/* Card Header & Badge */}
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[11px] font-mono font-bold border border-blue-200">
+                    <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold border ${
+                      isPega
+                        ? 'bg-[#168FE5] text-white border-[#168FE5]'
+                        : 'bg-blue-50 text-blue-700 border-blue-200'
+                    }`}>
                       {cert.badge || cert.category}
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
                       <Check className="w-3 h-3" /> Verified
                     </span>
                   </div>
+
+                  {/* Optional preview thumbnail for Pega */}
+                  {cert.previewImage && (
+                    <div 
+                      onClick={() => handleOpenCertificate(cert)}
+                      className="cursor-pointer mb-4 rounded-xl overflow-hidden border border-slate-200 bg-slate-50 relative aspect-[16/10] flex items-center justify-center hover:opacity-95 transition-opacity"
+                    >
+                      <img
+                        src={cert.previewImage}
+                        alt={cert.title}
+                        className="w-full h-full object-cover block"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-slate-900/30 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                        <Eye className="w-4 h-4" />
+                        <span>Preview</span>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Title & Subtitle */}
                   <h4 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug mb-1">
@@ -260,18 +285,23 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
 
                 {/* Card Footer Actions */}
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
-                  <div className="text-[11px] font-mono text-slate-400 truncate max-w-[130px]">
+                  <div className="text-[11px] font-mono text-slate-400 truncate max-w-[120px]">
                     {cert.credentialId}
                   </div>
 
                   <div className="flex items-center gap-2">
-                    {/* View Modal Details */}
+                    {/* View Certificate Button */}
                     <button
                       type="button"
-                      onClick={() => setSelectedCert(cert)}
-                      className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-all cursor-pointer"
+                      onClick={() => handleOpenCertificate(cert)}
+                      className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                        isPega
+                          ? 'bg-[#168FE5] hover:bg-[#0D74BE] text-white shadow-xs'
+                          : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                      }`}
                     >
-                      Details
+                      <Eye className="w-3 h-3" />
+                      <span>{isPega ? "View Certificate" : "Details"}</span>
                     </button>
 
                     {/* LinkedIn Verify */}
@@ -279,16 +309,17 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
                       href={cert.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-semibold transition-all"
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-semibold transition-all"
+                      title="Verify on LinkedIn"
                     >
                       <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                      Verify
                       <ExternalLink className="w-2.5 h-2.5 opacity-80" />
                     </a>
                   </div>
                 </div>
               </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Empty Search State */}
