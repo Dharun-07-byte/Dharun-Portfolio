@@ -135,13 +135,6 @@ export default function Sidebar({ onOpenTerminal, activeSection, onNavigate, isD
               >
                 <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#168FE5]' : 'text-blue-200'}`} />
                 <span>{item.label}</span>
-                {item.id === 'certificates' && (
-                  <span className={`ml-auto text-[10px] font-extrabold px-1.5 py-0.5 rounded-full ${
-                    isActive ? 'bg-blue-100 text-[#168FE5]' : 'bg-white/20 text-white'
-                  }`}>
-                    PEGA
-                  </span>
-                )}
               </a>
             );
           })}
