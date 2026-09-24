@@ -177,7 +177,7 @@ export const certificationsData = [
     featured: true,
     date: "Verified",
     credentialId: "SMARTBRIDGE-PEGA-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Pega Systems", "Low-Code Development", "Workflow Automation", "Case Management", "System Architecture"],
     description: "Completed the National Internship Program sponsored by Pegasystems (Pega) in collaboration with SmartBridge, mastering enterprise low-code application design, case life cycle management, and workflow automation."
   },
@@ -190,7 +190,7 @@ export const certificationsData = [
     category: "Programming",
     date: "Verified",
     credentialId: "NIELIT-PY-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Python", "Programming Logic", "Data Basics"],
     description: "Certification covering foundational Python syntax, algorithmic logic, standard libraries, and data manipulation."
   },
@@ -203,7 +203,7 @@ export const certificationsData = [
     category: "ECE & Hardware",
     date: "Verified",
     credentialId: "NIELIT-VLSI-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["VLSI Design", "Digital Circuits", "Semiconductor Basics"],
     description: "Core electronics credential in VLSI design methodologies, CMOS principles, and digital circuit architectures."
   },
@@ -216,7 +216,7 @@ export const certificationsData = [
     category: "ECE & Hardware",
     date: "Verified",
     credentialId: "NIELIT-EMB-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Embedded Systems", "Microcontrollers", "C/C++"],
     description: "Hands-on certification in embedded microcontrollers, firmware logic, interfacing peripherals, and embedded C programming."
   },
@@ -229,7 +229,7 @@ export const certificationsData = [
     category: "ECE & Hardware",
     date: "Verified",
     credentialId: "CISCO-IOT-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["IoT", "Digital Transformation", "Sensor Networks"],
     description: "Global credential covering IoT architecture, sensor networks, cloud connectivity, and industrial automation."
   },
@@ -242,7 +242,7 @@ export const certificationsData = [
     category: "Programming",
     date: "Verified",
     credentialId: "INFOSYS-PY-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Python OOP", "Data Structures", "Problem Solving"],
     description: "Comprehensive software training in object-oriented programming, data structures, and algorithmic problem solving."
   },
@@ -255,7 +255,7 @@ export const certificationsData = [
     category: "Internships",
     date: "Verified",
     credentialId: "SALESFORCE-AGY-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Agentic AI", "Salesforce Ecosystem", "Automation"],
     description: "Specialized training in generative and autonomous AI agents, enterprise workflow automation, and CRM intelligence."
   },
@@ -268,7 +268,7 @@ export const certificationsData = [
     category: "Professional",
     date: "Verified",
     credentialId: "HP-CAREER-2024",
-    credentialUrl: "/resume.pdf",
+    credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Professional Ethics", "Communication", "Interview Skills"],
     description: "Professional development credential focusing on career readiness, corporate communications, and interview preparation."
   }

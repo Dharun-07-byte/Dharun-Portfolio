@@ -95,7 +95,7 @@ export default function TerminalModal({ isOpen, onClose }) {
         case 'certs': {
           let text = "[VERIFIED CERTIFICATIONS & COURSES]\n";
           certificationsData.forEach(c => {
-            text += `\n• ${c.title}\n  Issuer: ${c.issuer}\n  Credential ID: ${c.credentialId}\n`;
+            text += `\n• ${c.title}\n  Issuer: ${c.issuer}\n  Credential ID: ${c.credentialId}\n  Verify (LinkedIn): ${c.credentialUrl}\n`;
           });
           newHistory.push({ text, type: "output" });
           break;

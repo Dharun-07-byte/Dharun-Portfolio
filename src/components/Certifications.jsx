@@ -121,20 +121,33 @@ export default function Certifications({ onShowToast }) {
 
               {/* Card Bottom / Footer */}
               <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                <div className="flex items-center gap-1.5 font-mono text-xs text-slate-500 truncate max-w-[240px]">
+                <div className="flex items-center gap-1.5 font-mono text-xs text-slate-500 truncate max-w-[200px]">
                   <KeyRound className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                   <span className="truncate">{cert.credentialId}</span>
                 </div>
 
-                {/* View Certificate Button */}
-                <button
-                  type="button"
-                  onClick={() => handleViewCertificate(cert)}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all w-full sm:w-auto justify-center cursor-pointer"
-                >
-                  <ExternalLink className="w-3.5 h-3.5" />
-                  View Certificate
-                </button>
+                <div className="flex items-center gap-2 w-full sm:w-auto">
+                  {/* Digital Certificate Preview Modal Button */}
+                  <button
+                    type="button"
+                    onClick={() => handleViewCertificate(cert)}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold hover:bg-blue-100 transition-all cursor-pointer"
+                  >
+                    Preview
+                  </button>
+
+                  {/* Direct Verify on LinkedIn */}
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#0A66C2] hover:bg-[#004182] text-white text-xs font-semibold shadow-xs hover:shadow transition-all justify-center"
+                  >
+                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                    <ExternalLink className="w-3 h-3 opacity-80" />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -145,7 +158,7 @@ export default function Certifications({ onShowToast }) {
           <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200" onClick={() => setSelectedCert(null)}>
             <div className="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 border border-slate-200 shadow-2xl relative" onClick={(e) => e.stopPropagation()}>
               <div className="flex justify-between items-start mb-4">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-mono font-bold">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-mono font-bold">
                   <Check className="w-3.5 h-3.5" /> Verified Credential
                 </div>
                 <button
@@ -219,15 +232,28 @@ export default function Certifications({ onShowToast }) {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
-                <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-blue-600 text-white text-xs font-semibold hover:bg-blue-700 transition-all w-full sm:w-auto justify-center"
-                >
-                  <FileText className="w-3.5 h-3.5" />
-                  View Resume & Credentials (PDF)
-                </a>
+                <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
+                  <a
+                    href={selectedCert.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#0A66C2] text-white text-xs font-semibold hover:bg-[#004182] transition-all w-full sm:w-auto justify-center shadow-xs"
+                  >
+                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    Verify on LinkedIn
+                    <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                  </a>
+
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold hover:bg-blue-100 transition-all w-full sm:w-auto justify-center"
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    Resume (PDF)
+                  </a>
+                </div>
 
                 <button
                   type="button"
