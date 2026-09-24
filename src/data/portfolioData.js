@@ -168,18 +168,31 @@ export const experienceData = [
 
 export const certificationsData = [
   {
-    id: "cert-1",
-    title: "National Internship Program (Pega)",
-    subtitle: "Low-Code Application Development & Workflow Automation",
-    issuer: "SmartBridge in collaboration with Pegasystems (Pega)",
+    id: "pega-internship",
+    slug: "pega-internship",
+    title: "National Level Internship Program – Sponsored by Pega",
+    subtitle: "Enterprise Workflow Automation & Low-Code App Architecture",
+    issuer: "Pega (Pegasystems)",
+    partner: "SmartBridge",
+    programType: "National Level Internship Program",
     badge: "National Internship",
     category: "Internships",
     featured: true,
-    date: "Verified",
+    date: "Completed (2024)",
     credentialId: "SMARTBRIDGE-PEGA-2024",
+    previewImage: "/certificates/pega-internship-preview.svg",
+    pdfUrl: "/certificates/pega-internship.pdf",
+    route: "/certificates/pega-internship",
     credentialUrl: "https://www.linkedin.com/in/dharun-jaganathan-b8ab43379",
     skills: ["Pega Systems", "Low-Code Development", "Workflow Automation", "Case Management", "System Architecture"],
-    description: "Completed the National Internship Program sponsored by Pegasystems (Pega) in collaboration with SmartBridge, mastering enterprise low-code application design, case life cycle management, and workflow automation."
+    description: "Completed the National Level Internship Program sponsored by Pega (Pegasystems) in collaboration with SmartBridge. Gained rigorous practical exposure to enterprise workflow automation, low-code application design, case lifecycle management, and scalable cloud application architecture.",
+    completionInfo: "Completed in 2024 • Enterprise Low-Code Architecture & Workflow Automation",
+    competencies: [
+      "Enterprise Low-Code Application Development",
+      "Case Lifecycle Management & Automated Rules",
+      "Data Relationships, Forms & Portal UI Design",
+      "Integration & Verification on Pega Platform"
+    ]
   },
   {
     id: "cert-2",

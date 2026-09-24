@@ -7,6 +7,8 @@ export default function Timeline() {
 
   return (
     <section className="py-24 relative" id="education">
+      <div id="achievements" className="absolute -top-16"></div>
+      <div id="experience" className="absolute -top-16"></div>
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">

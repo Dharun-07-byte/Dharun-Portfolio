@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="100%" height="100%" style="background:#ffffff; font-family:'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1e3d"/>
+      <stop offset="35%" stop-color="#004b99"/>
+      <stop offset="70%" stop-color="#0073d1"/>
+      <stop offset="100%" stop-color="#00a3e0"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="30%" stop-color="#eab308"/>
+      <stop offset="70%" stop-color="#ca8a04"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Certificate Outer Background -->
+  <rect width="1200" height="850" fill="url(#bgGrad)"/>
+
+  <!-- Ornate Border Frame -->
+  <rect x="25" y="25" width="1150" height="800" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="8"/>
+  <rect x="37" y="37" width="1126" height="776" rx="12" fill="none" stroke="#ca8a04" stroke-width="2" stroke-dasharray="8 4"/>
+  <rect x="45" y="45" width="1110" height="760" rx="10" fill="none" stroke="#004b99" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Corner Flourishes -->
+  <g fill="#004b99" opacity="0.6">
+    <path d="M 50 80 L 80 50 L 90 60 L 60 90 Z"/>
+    <path d="M 1150 80 L 1120 50 L 1110 60 L 1140 90 Z"/>
+    <path d="M 50 770 L 80 800 L 90 790 L 60 760 Z"/>
+    <path d="M 1150 770 L 1120 800 L 1110 790 L 1140 760 Z"/>
+  </g>
+
+  <!-- Watermark Pattern Background -->
+  <g opacity="0.03" transform="translate(600, 425) scale(2.2)">
+    <circle r="140" fill="none" stroke="#004b99" stroke-width="12"/>
+    <polygon points="0,-120 104,60 -104,60" fill="none" stroke="#004b99" stroke-width="8"/>
+    <polygon points="0,120 104,-60 -104,-60" fill="none" stroke="#004b99" stroke-width="8"/>
+  </g>
+
+  <!-- Header Banner: Partner / Sponsor Logos Header -->
+  <g transform="translate(100, 85)">
+    <!-- Pega Logo Area -->
+    <rect x="0" y="0" width="160" height="48" rx="8" fill="#0b1e3d"/>
+    <text x="80" y="32" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="4">PEGA</text>
+    
+    <!-- SmartBridge Co-sponsor Logo Area -->
+    <rect x="840" y="0" width="160" height="48" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="920" y="30" font-size="16" font-weight="700" fill="#0073d1" text-anchor="middle" letter-spacing="1.5">SmartBridge</text>
+  </g>
+
+  <!-- Certificate Supertitle -->
+  <text x="600" y="195" font-size="15" font-weight="700" fill="#0073d1" text-anchor="middle" letter-spacing="6">OFFICIAL NATIONAL INTERNSHIP CREDENTIAL</text>
+
+  <!-- Main Certificate Title -->
+  <text x="600" y="245" font-size="38" font-weight="800" fill="#0b1e3d" text-anchor="middle" letter-spacing="1">CERTIFICATE OF COMPLETION</text>
+
+  <!-- Horizontal Divider Line with Diamond -->
+  <line x1="360" y1="268" x2="560" y2="268" stroke="#ca8a04" stroke-width="2"/>
+  <polygon points="600,263 605,268 600,273 595,268" fill="#ca8a04"/>
+  <line x1="640" y1="268" x2="840" y2="268" stroke="#ca8a04" stroke-width="2"/>
+
+  <!-- Subtitle -->
+  <text x="600" y="310" font-size="16" font-weight="500" fill="#475569" text-anchor="middle">This is to proudly certify that</text>
+
+  <!-- Candidate Name -->
+  <text x="600" y="375" font-size="44" font-weight="800" fill="#0b1e3d" text-anchor="middle" letter-spacing="0.5">DHARUN S.J</text>
+  <text x="600" y="415" font-size="16" font-weight="600" fill="#0284c7" text-anchor="middle">V.S.B. Engineering College, Karur</text>
+
+  <!-- Body Text -->
+  <text x="600" y="470" font-size="16" font-weight="400" fill="#334155" text-anchor="middle">has successfully completed the intensive curriculum and project evaluation of the</text>
+  <text x="600" y="505" font-size="22" font-weight="800" fill="#004b99" text-anchor="middle" letter-spacing="0.5">National Level Internship Program</text>
+  <text x="600" y="535" font-size="15" font-weight="600" fill="#0284c7" text-anchor="middle">Sponsored by Pegasystems (Pega) &amp; SmartBridge</text>
+
+  <text x="600" y="575" font-size="13.5" font-weight="400" fill="#64748b" text-anchor="middle">
+    Covering Low-Code Application Development, Enterprise Workflow Automation, Case Lifecycle Management,
+  </text>
+  <text x="600" y="598" font-size="13.5" font-weight="400" fill="#64748b" text-anchor="middle">
+    Data Architecture &amp; System Integration on the Pega Infinity Platform.
+  </text>
+
+  <!-- Gold Seal -->
+  <g transform="translate(600, 680)" filter="url(#shadow)">
+    <circle r="46" fill="url(#goldGrad)"/>
+    <circle r="40" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 2"/>
+    <circle r="36" fill="#0b1e3d"/>
+    <polygon points="0,-18 5,-5 18,-5 8,4 12,17 0,9 -12,17 -8,4 -18,-5 -5,-5" fill="url(#goldGrad)"/>
+    <text x="0" y="24" font-size="9" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1">VERIFIED</text>
+  </g>
+
+  <!-- Left Signature Area -->
+  <g transform="translate(230, 680)">
+    <!-- Signature Line -->
+    <path d="M -80 0 Q -40 -25 0 -5 T 40 -20 T 80 0" fill="none" stroke="#004b99" stroke-width="2" opacity="0.8"/>
+    <line x1="-100" y1="15" x2="100" y2="15" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="0" y="35" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">Program Director</text>
+    <text x="0" y="52" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">SmartBridge Educational Services</text>
+  </g>
+
+  <!-- Right Signature Area -->
+  <g transform="translate(970, 680)">
+    <!-- Signature Line -->
+    <path d="M -70 -5 Q -30 -30 10 -10 T 50 -25 T 75 -2" fill="none" stroke="#0b1e3d" stroke-width="2" opacity="0.8"/>
+    <line x1="-100" y1="15" x2="100" y2="15" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="0" y="35" font-size="13" font-weight="700" fill="#0f172a" text-anchor="middle">Academic Relations Lead</text>
+    <text x="0" y="52" font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">Pegasystems University Program</text>
+  </g>
+
+  <!-- Bottom Verification ID Strip -->
+  <g transform="translate(600, 785)">
+    <text x="-480" y="0" font-size="11" font-family="'JetBrains Mono', monospace" fill="#64748b">ID: SMARTBRIDGE-PEGA-2024</text>
+    <text x="0" y="0" font-size="11" font-family="'JetBrains Mono', monospace" fill="#0284c7" text-anchor="middle">AUTHENTICITY VERIFIED • STATUS: COMPLETED</text>
+    <text x="480" y="0" font-size="11" font-family="'JetBrains Mono', monospace" fill="#64748b" text-anchor="end">DATE: 2024</text>
+  </g>
+</svg>

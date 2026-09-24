@@ -72,23 +72,31 @@ export default function Hero({ onOpenTerminal, onShowToast }) {
             I am an Electronics and Communication Engineering (ECE) student passionate about <strong className="text-slate-900 font-semibold">software development</strong>, <strong className="text-blue-600 font-semibold">cybersecurity</strong>, <strong className="text-indigo-600 font-semibold">AI</strong>, and <strong className="text-emerald-600 font-semibold">emerging technologies</strong>. I focus on connecting core hardware principles with modern web applications and secure logic design.
           </p>
 
-          {/* Two Primary Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 mb-10">
+          {/* Primary Action Buttons */}
+          <div className="flex flex-wrap items-center gap-3.5 mb-10">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all group cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-sm shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/35 hover:-translate-y-0.5 transition-all group cursor-pointer"
             >
-              View My Projects
+              <span>View Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+
+            <a
+              href="#certifications"
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-bold text-sm hover:bg-blue-100 hover:border-blue-300 hover:-translate-y-0.5 transition-all shadow-2xs"
+            >
+              <Award className="w-4 h-4 text-blue-600" />
+              <span>Certificates &amp; Pega Internship</span>
             </a>
 
             <button
               type="button"
               onClick={handleDownloadResume}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white border border-slate-300 text-slate-800 font-semibold text-sm hover:bg-slate-50 hover:border-blue-500 hover:-translate-y-0.5 transition-all shadow-sm cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white border border-slate-300 text-slate-700 font-semibold text-sm hover:bg-slate-50 hover:border-slate-400 hover:-translate-y-0.5 transition-all shadow-2xs cursor-pointer"
             >
-              <Download className="w-4 h-4 text-blue-600" />
-              Download Resume
+              <Download className="w-4 h-4 text-slate-500" />
+              <span>Resume</span>
             </button>
           </div>
 
