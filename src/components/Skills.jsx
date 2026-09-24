@@ -1,82 +1,84 @@
-import { Code2, Layout, Cpu, Globe2, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Code2, Layout, Cpu, Globe2, CheckCircle2 } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
 
 const categoryIcons = {
-  code: <Code2 className="w-6 h-6 text-cyan-400" />,
-  layout: <Layout className="w-6 h-6 text-blue-400" />,
-  cpu: <Cpu className="w-6 h-6 text-purple-400" />,
-  globe: <Globe2 className="w-6 h-6 text-emerald-400" />
+  code: Code2,
+  layout: Layout,
+  cpu: Cpu,
+  globe: Globe2
 };
 
 export default function Skills() {
   return (
-    <section className="py-24 relative" id="skills">
-      {/* Background glow */}
-      <div className="absolute top-1/3 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px] pointer-events-none pulse-circle"></div>
-
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <section id="skills" className="py-20 lg:py-24 bg-[#F5F8FC] border-b border-slate-200/70">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+        
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-semibold tracking-wider uppercase mb-4 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5" /> Technical Expertise
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            Skills & <span className="gradient-text">Competencies</span>
+        <div className="mb-14">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="text-xs font-bold tracking-widest uppercase text-[#168FE5]">
+              TECHNICAL COMPETENCIES
+            </span>
+            <span className="w-8 h-0.5 bg-[#168FE5] rounded-full"></span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#17202A] tracking-tight">
+            Skills &amp; Capabilities
           </h2>
-          <p className="text-slate-600 text-base">
-            Categorized technical capabilities across Programming, Web Engineering, ECE Hardware, and Emerging Technologies.
+          <p className="text-slate-600 text-base max-w-2xl mt-2">
+            A comprehensive overview of programming languages, hardware foundations, web technologies, and engineering tools.
           </p>
         </div>
 
         {/* 4 Category Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map((category, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl p-6 sm:p-8 flex flex-col border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-300 group"
-            >
-              {/* Category Header */}
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-200">
-                <div className="p-3 rounded-xl bg-blue-50 border border-blue-200 group-hover:bg-blue-100 transition-colors">
-                  {categoryIcons[category.iconKey] || <Code2 className="w-6 h-6 text-blue-600" />}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {skillCategories.map((category, idx) => {
+            const Icon = categoryIcons[category.iconKey] || Code2;
+            return (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 shadow-xs hover:border-[#168FE5]/40 hover:shadow-sm transition-all"
+              >
+                {/* Category Header */}
+                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                  <div className="w-10 h-10 rounded-xl bg-[#EBF5FE] text-[#168FE5] flex items-center justify-center">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#17202A]">
+                      {category.name}
+                    </h3>
+                    <span className="text-xs font-medium text-slate-400">
+                      {category.skills.length} Competencies
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                    {category.name}
-                  </h3>
-                  <span className="text-[11px] font-mono text-slate-500">
-                    {category.skills.length} Core Skills
-                  </span>
-                </div>
-              </div>
 
-              {/* Skills Cards Grid inside Category */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-grow">
-                {category.skills.map((skill, sIdx) => (
-                  <div
-                    key={sIdx}
-                    className="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:bg-white hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-1.5">
-                        <span className="font-bold text-sm text-slate-900 flex items-center gap-1.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {category.skills.map((skill, sIdx) => (
+                    <div
+                      key={sIdx}
+                      className="p-3.5 rounded-xl bg-slate-50/80 border border-slate-200/70 hover:bg-white hover:border-[#168FE5]/50 transition-all flex flex-col justify-between"
+                    >
+                      <div className="flex items-center justify-between gap-1 mb-1">
+                        <span className="font-bold text-sm text-[#17202A]">
                           {skill.name}
                         </span>
-                        <span className="px-2 py-0.5 rounded bg-blue-50 text-blue-700 text-[10px] font-mono border border-blue-200 font-medium">
+                        <span className="text-[10px] font-mono font-semibold px-2 py-0.5 rounded bg-white text-[#168FE5] border border-blue-100">
                           {skill.tag}
                         </span>
                       </div>
-                      <p className="text-slate-600 text-xs leading-relaxed">
+                      <p className="text-xs text-slate-500 leading-snug">
                         {skill.desc}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

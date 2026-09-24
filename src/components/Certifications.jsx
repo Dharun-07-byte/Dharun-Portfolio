@@ -31,22 +31,23 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
   };
 
   return (
-    <section className="py-24 relative bg-slate-50/50" id="certifications">
-      {/* Background Subtle Ambient Glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+    <section className="py-20 lg:py-24 bg-[#F5F8FC] border-b border-slate-200/70 relative" id="certificates">
+      <div id="certifications" className="absolute -top-16"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-bold tracking-wider uppercase mb-4 shadow-2xs">
-            <Award className="w-3.5 h-3.5 text-blue-600" />
-            <span>Accredited Credentials &amp; Achievements</span>
+        <div className="mb-14">
+          <div className="inline-flex items-center gap-2 mb-2">
+            <span className="text-xs font-bold tracking-widest uppercase text-[#168FE5]">
+              VERIFIED CREDENTIALS
+            </span>
+            <span className="w-8 h-0.5 bg-[#168FE5] rounded-full"></span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            Certificates &amp; <span className="gradient-text">Verified Achievements</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#17202A] tracking-tight">
+            Certificates
           </h2>
-          <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-            Officially accredited certifications and industrial internship credentials in enterprise workflow automation, embedded systems, VLSI logic, and full-stack programming.
+          <p className="text-slate-600 text-base max-w-2xl mt-2">
+            Industry accredited certifications and internship credentials in enterprise workflow automation, embedded systems, VLSI logic, and software engineering.
           </p>
         </div>
 
@@ -166,9 +167,9 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
                     <button
                       type="button"
                       onClick={() => onNavigateToCertificate ? onNavigateToCertificate('/certificates/pega-internship') : setSelectedCert(certificationsData[0])}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm shadow-sm transition-all cursor-pointer hover:gap-3"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#168FE5] hover:bg-[#0D74BE] text-white font-bold text-xs sm:text-sm shadow-sm transition-all cursor-pointer hover:gap-3"
                     >
-                      <span>View Certificate</span>
+                      <span>VIEW CERTIFICATE</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
 
@@ -178,10 +179,10 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
                       download="Dharun_SJ_Pega_National_Internship_Certificate.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm transition-all shadow-xs"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 hover:border-[#168FE5] text-[#17202A] hover:text-[#168FE5] font-bold text-xs sm:text-sm transition-all shadow-2xs"
                     >
-                      <Download className="w-4 h-4 text-blue-600" />
-                      <span>Download PDF</span>
+                      <Download className="w-4 h-4 text-[#168FE5]" />
+                      <span>DOWNLOAD CERTIFICATE</span>
                     </a>
 
                     {/* Verify on LinkedIn */}
@@ -189,10 +190,10 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
                       href="https://www.linkedin.com/in/dharun-jaganathan-b8ab43379"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0A66C2] hover:bg-[#004182] text-white font-semibold text-xs sm:text-sm transition-all shadow-xs"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0A66C2] hover:bg-[#004182] text-white font-bold text-xs sm:text-sm transition-all shadow-2xs"
                     >
                       <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                      <span>LinkedIn Credential</span>
+                      <span>VERIFY ON LINKEDIN</span>
                       <ExternalLink className="w-3.5 h-3.5 opacity-80" />
                     </a>
                   </div>
