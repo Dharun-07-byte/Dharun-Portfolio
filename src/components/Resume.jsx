@@ -57,6 +57,10 @@ export default function Resume({ onShowToast }) {
                   <span><strong className="font-extrabold text-slate-900">Software Engineering:</strong> React 19, Vite, JavaScript, Tailwind CSS, Python, C, and C++.</span>
                 </div>
                 <div className="flex items-start gap-2.5 text-sm text-slate-800 font-medium">
+                  <CheckCircle2 className="w-4 h-4 text-purple-600 shrink-0 mt-1" />
+                  <span><strong className="font-extrabold text-slate-900">Internship & Experience:</strong> National Internship Program (Pega / SmartBridge), BSNL In-Plant Training, and Coral Engineering.</span>
+                </div>
+                <div className="flex items-start gap-2.5 text-sm text-slate-800 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0 mt-1" />
                   <span><strong className="font-extrabold text-slate-900">Technology Domains:</strong> Artificial Intelligence workflows, Cybersecurity principles, and Git/GitHub version control.</span>
                 </div>

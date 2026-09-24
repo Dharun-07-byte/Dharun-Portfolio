@@ -26,7 +26,7 @@ export const personalInfo = {
 
 export const statsData = [
   { label: "B.E. ECE CGPA", value: "8.40 / 10", color: "#00f2fe" },
-  { label: "Certifications", value: "7 Verified", color: "#7928ca" },
+  { label: "Certifications", value: "8 Verified", color: "#7928ca" },
   { label: "HSC Score", value: "81%", color: "#00f5a0" },
   { label: "SSLC Score", value: "83%", color: "#ff007f" }
 ];
@@ -144,15 +144,24 @@ export const educationData = [
 
 export const experienceData = [
   {
+    role: "National Internship Program",
+    company: "SmartBridge (Sponsored by Pegasystems / Pega)",
+    location: "Virtual / Remote",
+    type: "National Internship",
+    desc: "Completed the National Internship Program sponsored by Pega in collaboration with SmartBridge. Gained practical experience in enterprise workflow automation, low-code application development, case design, and Pega architecture fundamentals."
+  },
+  {
     role: "In-Plant Training",
     company: "BSNL, Nagercoil",
     location: "Nagercoil, Tamil Nadu",
+    type: "In-Plant Training",
     desc: "Underwent hands-on in-plant training at Bharat Sanchar Nigam Limited (BSNL), gaining practical exposure to telecommunication networks, switching systems, and digital transmission protocols."
   },
   {
     role: "Engineering Internship",
     company: "Coral Engineering Works India Pvt. Ltd., Erode",
     location: "Erode, Tamil Nadu",
+    type: "Industrial Internship",
     desc: "Completed internship training focusing on industrial engineering operations, component manufacturing workflows, and equipment maintenance."
   }
 ];
@@ -160,66 +169,108 @@ export const experienceData = [
 export const certificationsData = [
   {
     id: "cert-1",
-    title: "Python for Beginners",
-    issuer: "NIELIT (National Institute of Electronics & Information Technology)",
+    title: "National Internship Program (Pega)",
+    subtitle: "Low-Code Application Development & Workflow Automation",
+    issuer: "SmartBridge in collaboration with Pegasystems (Pega)",
+    badge: "National Internship",
+    category: "Internships",
+    featured: true,
     date: "Verified",
-    credentialId: "NIELIT-PY-2024",
+    credentialId: "SMARTBRIDGE-PEGA-2024",
     credentialUrl: "/resume.pdf",
-    skills: ["Python", "Programming Logic", "Data Basics"]
+    skills: ["Pega Systems", "Low-Code Development", "Workflow Automation", "Case Management", "System Architecture"],
+    description: "Completed the National Internship Program sponsored by Pegasystems (Pega) in collaboration with SmartBridge, mastering enterprise low-code application design, case life cycle management, and workflow automation."
   },
   {
     id: "cert-2",
-    title: "VLSI for Beginners",
-    issuer: "NIELIT",
+    title: "Python for Beginners",
+    subtitle: "Programming Fundamentals & Data Basics",
+    issuer: "NIELIT (National Institute of Electronics & Information Technology)",
+    badge: "Govt. of India",
+    category: "Programming",
     date: "Verified",
-    credentialId: "NIELIT-VLSI-2024",
+    credentialId: "NIELIT-PY-2024",
     credentialUrl: "/resume.pdf",
-    skills: ["VLSI Design", "Digital Circuits", "Semiconductor Basics"]
+    skills: ["Python", "Programming Logic", "Data Basics"],
+    description: "Certification covering foundational Python syntax, algorithmic logic, standard libraries, and data manipulation."
   },
   {
     id: "cert-3",
-    title: "Embedded Systems for Beginners",
+    title: "VLSI for Beginners",
+    subtitle: "Very Large Scale Integration & Digital Logic",
     issuer: "NIELIT",
+    badge: "ECE Core",
+    category: "ECE & Hardware",
     date: "Verified",
-    credentialId: "NIELIT-EMB-2024",
+    credentialId: "NIELIT-VLSI-2024",
     credentialUrl: "/resume.pdf",
-    skills: ["Embedded Systems", "Microcontrollers", "C/C++"]
+    skills: ["VLSI Design", "Digital Circuits", "Semiconductor Basics"],
+    description: "Core electronics credential in VLSI design methodologies, CMOS principles, and digital circuit architectures."
   },
   {
     id: "cert-4",
-    title: "Introduction to IoT and Digital Transformation",
-    issuer: "CISCO Networking Academy",
+    title: "Embedded Systems for Beginners",
+    subtitle: "Microcontroller Architectures & Embedded C",
+    issuer: "NIELIT",
+    badge: "ECE Core",
+    category: "ECE & Hardware",
     date: "Verified",
-    credentialId: "CISCO-IOT-2024",
+    credentialId: "NIELIT-EMB-2024",
     credentialUrl: "/resume.pdf",
-    skills: ["IoT", "Digital Transformation", "Sensor Networks"]
+    skills: ["Embedded Systems", "Microcontrollers", "C/C++"],
+    description: "Hands-on certification in embedded microcontrollers, firmware logic, interfacing peripherals, and embedded C programming."
   },
   {
     id: "cert-5",
-    title: "Python Foundation Certificate",
-    issuer: "Infosys Springboard",
+    title: "Introduction to IoT & Digital Transformation",
+    subtitle: "Connected Devices & Industrial IoT",
+    issuer: "CISCO Networking Academy",
+    badge: "Global Industry",
+    category: "ECE & Hardware",
     date: "Verified",
-    credentialId: "INFOSYS-PY-2024",
+    credentialId: "CISCO-IOT-2024",
     credentialUrl: "/resume.pdf",
-    skills: ["Python OOP", "Data Structures", "Problem Solving"]
+    skills: ["IoT", "Digital Transformation", "Sensor Networks"],
+    description: "Global credential covering IoT architecture, sensor networks, cloud connectivity, and industrial automation."
   },
   {
     id: "cert-6",
-    title: "Becoming an Agentforce Champion",
-    issuer: "Salesforce / FutureSkills Prime",
+    title: "Python Foundation Certificate",
+    subtitle: "Object-Oriented Programming & Problem Solving",
+    issuer: "Infosys Springboard",
+    badge: "Industry Leader",
+    category: "Programming",
     date: "Verified",
-    credentialId: "SALESFORCE-AGY-2024",
+    credentialId: "INFOSYS-PY-2024",
     credentialUrl: "/resume.pdf",
-    skills: ["Agentic AI", "Salesforce Ecosystem", "Automation"]
+    skills: ["Python OOP", "Data Structures", "Problem Solving"],
+    description: "Comprehensive software training in object-oriented programming, data structures, and algorithmic problem solving."
   },
   {
     id: "cert-7",
+    title: "Becoming an Agentforce Champion",
+    subtitle: "Agentic AI & Enterprise Automation",
+    issuer: "Salesforce / FutureSkills Prime",
+    badge: "Agentic AI",
+    category: "Internships",
+    date: "Verified",
+    credentialId: "SALESFORCE-AGY-2024",
+    credentialUrl: "/resume.pdf",
+    skills: ["Agentic AI", "Salesforce Ecosystem", "Automation"],
+    description: "Specialized training in generative and autonomous AI agents, enterprise workflow automation, and CRM intelligence."
+  },
+  {
+    id: "cert-8",
     title: "Resume Writing and Job Interviewing",
+    subtitle: "Executive Communication & Interview Acumen",
     issuer: "HP Foundation",
+    badge: "Professional",
+    category: "Professional",
     date: "Verified",
     credentialId: "HP-CAREER-2024",
     credentialUrl: "/resume.pdf",
-    skills: ["Professional Ethics", "Communication", "Interview Skills"]
+    skills: ["Professional Ethics", "Communication", "Interview Skills"],
+    description: "Professional development credential focusing on career readiness, corporate communications, and interview preparation."
   }
 ];
 
@@ -238,10 +289,10 @@ export const terminalHelpText = `
 Available Commands:
   about         - View Dharun S.J's objective, college CGPA, and contact info
   education     - View V.S.B. Engineering College degree & school scores
-  experience    - Display BSNL & Coral Engineering Works training details
+  experience    - Display Pega / SmartBridge, BSNL & Coral Engineering training details
   projects      - Display AI Food Booking Agent project architecture
   skills        - List C/C++, Python, Java, and Electronics competencies
-  certs         - View 7 verified certifications (NIELIT, CISCO, Infosys, HP)
+  certs         - View 8 verified certifications (Pega, NIELIT, CISCO, Infosys, HP)
   leetcode      - View LeetCode problem solving profile & link
   activities    - View quiz competitions, Junior Red Cross & sports highlights
   contact       - Get direct phone, email, and location details

@@ -120,7 +120,7 @@ export default function Timeline() {
                   </div>
                   <div>
                     <span className="text-xs font-mono text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200 font-medium">
-                      Industrial Exposure
+                      {exp.type || "Industrial Exposure"}
                     </span>
                     <h3 className="text-xl font-bold text-slate-900 mt-1">{exp.role}</h3>
                     <h4 className="text-sm font-semibold text-slate-700 mb-2">{exp.company}</h4>

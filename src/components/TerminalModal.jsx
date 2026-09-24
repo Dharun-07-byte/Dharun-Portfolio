@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Terminal, X } from 'lucide-react';
-import { personalInfo, projectsData, skillCategories, educationData, certificationsData, terminalHelpText } from '../data/portfolioData';
+import { personalInfo, projectsData, skillCategories, educationData, experienceData, certificationsData, terminalHelpText } from '../data/portfolioData';
 
 export default function TerminalModal({ isOpen, onClose }) {
   const [inputVal, setInputVal] = useState('');
@@ -83,8 +83,17 @@ export default function TerminalModal({ isOpen, onClose }) {
           break;
         }
 
+        case 'experience': {
+          let text = "[INDUSTRIAL EXPERIENCE & INTERNSHIPS]\n";
+          experienceData.forEach(exp => {
+            text += `\n• ${exp.role}\n  Company: ${exp.company} (${exp.location})\n  Desc: ${exp.desc}\n`;
+          });
+          newHistory.push({ text, type: "output" });
+          break;
+        }
+
         case 'certs': {
-          let text = "[CERTIFICATIONS (PLACEHOLDERS)]\n";
+          let text = "[VERIFIED CERTIFICATIONS & COURSES]\n";
           certificationsData.forEach(c => {
             text += `\n• ${c.title}\n  Issuer: ${c.issuer}\n  Credential ID: ${c.credentialId}\n`;
           });
