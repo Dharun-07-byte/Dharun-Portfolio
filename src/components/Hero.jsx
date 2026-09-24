@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Mail, ExternalLink, Award, MapPin } from 'lucide-react';
+import { ArrowRight, Download, Mail, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Hero({ onOpenTerminal, onShowToast }) {
@@ -145,18 +145,14 @@ export default function Hero({ onOpenTerminal, onShowToast }) {
                 />
                 
                 {/* Subtle Bottom Information Tag */}
-                <div className="p-4 bg-white/95 backdrop-blur-xs border-t border-slate-100 flex items-center justify-between text-xs">
+                <div className="p-4 bg-white border-t border-slate-100 flex items-center justify-between text-xs">
                   <div>
                     <div className="font-extrabold text-[#17202A]">{personalInfo.name}</div>
                     <div className="text-slate-500 font-medium">B.E. ECE • Batch of 2028</div>
                   </div>
-                  <a
-                    href="#certificates"
-                    className="inline-flex items-center gap-1 text-[#168FE5] font-bold hover:underline"
-                  >
-                    <span>Pega Verified</span>
-                    <Award className="w-3.5 h-3.5" />
-                  </a>
+                  <span className="text-xs font-semibold text-slate-400">
+                    VSB Engineering College
+                  </span>
                 </div>
               </div>
             </div>
