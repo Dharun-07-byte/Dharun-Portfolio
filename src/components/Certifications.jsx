@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { 
   Award, ExternalLink, X, Building2, 
-  FileText, Check, Download, Eye, ArrowRight
+  FileText, Check, Eye
 } from 'lucide-react';
 import { certificationsData, personalInfo } from '../data/portfolioData';
 
@@ -84,124 +84,6 @@ export default function Certifications({ onShowToast, onNavigateToCertificate })
         </div>
 
         {/* ========================================================
-            FEATURED HERO CARD: Pega National Internship Program
-            ======================================================== */}
-        {activeCategory === "All" || activeCategory === "Internships" ? (
-          <div className="mb-12">
-            <div className="bg-white rounded-3xl border-2 border-blue-300/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden relative group">
-              {/* Highlight ribbon */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-700 via-indigo-600 to-cyan-500"></div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8 items-center">
-                {/* Left: Certificate Visual Thumbnail Frame */}
-                <div className="lg:col-span-5 relative">
-                  <div 
-                    onClick={() => onNavigateToCertificate?.('/certificates/pega-internship')}
-                    className="cursor-pointer group/thumb rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50 relative aspect-[4/3] flex items-center justify-center transition-transform hover:scale-[1.01]"
-                  >
-                    <img
-                      src="/certificates/pega-internship-preview.svg"
-                      alt="National Level Internship Program - Sponsored by Pega"
-                      className="w-full h-full object-cover block"
-                      loading="eager"
-                    />
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white font-semibold text-xs backdrop-blur-xs">
-                      <Eye className="w-4 h-4" />
-                      <span>Click to Open Certificate Viewer</span>
-                    </div>
-                  </div>
-                  <div className="mt-2 flex items-center justify-between text-[11px] font-mono text-slate-500 px-1">
-                    <span>ID: SMARTBRIDGE-PEGA-2024</span>
-                    <span className="text-emerald-600 font-semibold flex items-center gap-1">
-                      <Check className="w-3 h-3" /> Verified Credential
-                    </span>
-                  </div>
-                </div>
-
-                {/* Right: Certificate Information & Action Buttons */}
-                <div className="lg:col-span-7 flex flex-col justify-between h-full">
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-bold font-mono">
-                        National Level Internship Program
-                      </span>
-                      <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold">
-                        Pega &amp; SmartBridge
-                      </span>
-                      <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[11px] font-semibold">
-                        Completed 2024
-                      </span>
-                    </div>
-
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
-                      National Level Internship Program – Sponsored by Pega
-                    </h3>
-                    <h4 className="text-sm font-semibold text-blue-700 mb-3">
-                      Enterprise Workflow Automation &amp; Low-Code Architecture
-                    </h4>
-
-                    <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                      Completed the prestigious National Level Internship Program sponsored by Pegasystems (Pega) in partnership with SmartBridge. Mastered enterprise low-code application development, case life cycle management, business rule automation, and cloud system integration on the Pega Infinity architecture.
-                    </p>
-
-                    {/* Key Competencies Badges */}
-                    <div className="flex flex-wrap gap-1.5 mb-6">
-                      {[
-                        "Pega Systems", 
-                        "Low-Code Architecture", 
-                        "Workflow Automation", 
-                        "Case Lifecycle", 
-                        "System Integration"
-                      ].map((skill, idx) => (
-                        <span key={idx} className="px-2.5 py-1 rounded-md bg-blue-50 text-blue-700 text-xs font-mono font-medium border border-blue-200">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Actions Row */}
-                  <div className="pt-4 border-t border-slate-100 flex flex-wrap items-center gap-3">
-                    {/* View Certificate (Navigates to dedicated page) */}
-                    <button
-                      type="button"
-                      onClick={() => onNavigateToCertificate ? onNavigateToCertificate('/certificates/pega-internship') : setSelectedCert(certificationsData[0])}
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#168FE5] hover:bg-[#0D74BE] text-white font-bold text-xs sm:text-sm shadow-sm transition-all cursor-pointer hover:gap-3"
-                    >
-                      <span>VIEW CERTIFICATE</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
-
-                    {/* Download / Open PDF */}
-                    <a
-                      href="/certificates/pega-internship.pdf"
-                      download="Dharun_SJ_Pega_National_Internship_Certificate.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 hover:border-[#168FE5] text-[#17202A] hover:text-[#168FE5] font-bold text-xs sm:text-sm transition-all shadow-2xs"
-                    >
-                      <Download className="w-4 h-4 text-[#168FE5]" />
-                      <span>DOWNLOAD CERTIFICATE</span>
-                    </a>
-
-                    {/* Verify on LinkedIn */}
-                    <a
-                      href="https://www.linkedin.com/in/dharun-jaganathan-b8ab43379"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0A66C2] hover:bg-[#004182] text-white font-bold text-xs sm:text-sm transition-all shadow-2xs"
-                    >
-                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                      <span>VERIFY ON LINKEDIN</span>
-                      <ExternalLink className="w-3.5 h-3.5 opacity-80" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ) : null}        {/* ========================================================
             GRID OF ALL ACCREDITED CERTIFICATES & CREDENTIALS
             ======================================================== */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
