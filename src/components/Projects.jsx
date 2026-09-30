@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, FolderGit2, Info, X, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, Info, X, CheckCircle2 } from 'lucide-react';
 import { projectsData, projectCategories } from '../data/portfolioData';
 
 export default function Projects() {
