@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { 
   ArrowLeft, Download, ExternalLink, ZoomIn, ZoomOut, RotateCcw, 
-  ShieldCheck, Award, Building2, Calendar, CheckCircle2, Copy, Check, FileText
+  ShieldCheck, Award, Building2, CheckCircle2, Copy, Check, FileText
 } from 'lucide-react';
 import { certificationsData, personalInfo } from '../data/portfolioData';
 
