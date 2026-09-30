@@ -1,4 +1,4 @@
-import { Briefcase, Building2, MapPin, CheckCircle2, Award, Calendar } from 'lucide-react';
+import { Building2, MapPin, Award } from 'lucide-react';
 import { experienceData } from '../data/portfolioData';
 
 export default function Experience() {
