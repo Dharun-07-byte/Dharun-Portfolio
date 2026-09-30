@@ -1,4 +1,4 @@
-import { GraduationCap, Cpu, Code2, Target, CheckCircle2, Award, BookOpen } from 'lucide-react';
+import { GraduationCap, Cpu, Code2, Target, CheckCircle2 } from 'lucide-react';
 import { personalInfo, statsData } from '../data/portfolioData';
 
 export default function About() {
