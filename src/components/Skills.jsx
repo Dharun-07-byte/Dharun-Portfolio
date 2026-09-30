@@ -1,4 +1,4 @@
-import { Code2, Layout, Cpu, Globe2, CheckCircle2 } from 'lucide-react';
+import { Code2, Layout, Cpu, Globe2 } from 'lucide-react';
 import { skillCategories } from '../data/portfolioData';
 
 const categoryIcons = {
