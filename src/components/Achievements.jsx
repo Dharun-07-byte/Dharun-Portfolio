@@ -1,4 +1,4 @@
-import { Trophy, Award, HeartHandshake, Sparkles, CheckCircle2, Shield } from 'lucide-react';
+import { Trophy, Award, HeartHandshake, CheckCircle2, Shield } from 'lucide-react';
 import { extraCurricularData } from '../data/portfolioData';
 
 const achievementIcons = {
