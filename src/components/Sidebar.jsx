@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { 
   User, Briefcase, Wrench, FolderGit2, Award, Trophy, Mail, 
-  Menu, X, Terminal, ExternalLink, ArrowRight
+  Menu, X, Terminal
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
