@@ -1,7 +1,7 @@
 import { ArrowRight, Download, Mail, MapPin } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
-export default function Hero({ onOpenTerminal, onShowToast }) {
+export default function Hero({ onOpenTerminal: _onOpenTerminal, onShowToast }) {
   const handleDownloadResume = () => {
     onShowToast?.("Downloading S.J Dharun's Resume (PDF)... 📄");
     const link = document.createElement('a');
